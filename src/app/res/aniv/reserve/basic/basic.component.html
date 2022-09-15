@@ -21,14 +21,12 @@
         </mat-step>
         <mat-step [stepControl]="secondFormGroup" label="Traiteure">
             <form [formGroup]="secondFormGroup">
+                <div name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure">
                 <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg" value="1.JPG" alt="Card image cap">
                 <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg" value="2.JPG" alt="Card image cap">
                 <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg" value="1.JPG" alt="Card image cap">
                 <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg" value="2.JPG" alt="Card image cap">
-                <mat-form-field appearance="fill" class="robein">
-                    <mat-label>Traiteure</mat-label>
-                    <input matInput formControlName="secondCtrl" required placeholder="Entre le Numero du Traiteure choisie" name="id_traiteure" [(ngModel)]="aniv.id_traiteure">
-                </mat-form-field>
+                </div>
                 <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button matStepperNext>Next</button>
