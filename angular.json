@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "AutoCar"
+  "defaultProject": "AutoCar",
+  "cli": {
+    "analytics": false
+  }
 }
