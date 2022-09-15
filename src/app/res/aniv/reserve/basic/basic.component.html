@@ -1,0 +1,121 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Orchestre</ng-template>
+                <div class="rob">
+                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg" alt="Card image cap">
+                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/22.jpg" alt="Card image cap">
+                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/33.jpg" alt="Card image cap">
+                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/44.jpg" alt="Card image cap">
+                </div>
+                <mat-form-field appearance="fill" class="robein">
+                    <mat-label>Orchestre</mat-label>
+                    <input matInput formControlName="firstCtrl" required placeholder="Entre le Numero du Orchestre choisie" name="id_orchestre" [(ngModel)]="aniv.id_orchestre">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Traiteure">
+            <form [formGroup]="secondFormGroup">
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+                <mat-form-field appearance="fill" class="robein">
+                    <mat-label>Traiteure</mat-label>
+                    <input matInput formControlName="secondCtrl" required placeholder="Entre le Numero du Traiteure choisie" name="id_traiteure" [(ngModel)]="aniv.id_traiteure">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Salle</ng-template>
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+                <mat-form-field appearance="fill" class="robein">
+                    <mat-label>Salle</mat-label>
+                    <input matInput formControlName="thirdCtrl" required placeholder="Entre le Numero du Salle choisie" name="id_salle" [(ngModel)]="aniv.id_salle">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="fourthFormGroup">
+            <form [formGroup]="fourthFormGroup">
+                <ng-template matStepLabel>Cameramen</ng-template>
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+
+                <mat-form-field appearance="fill" class="robein">
+                    <mat-label>Cameramen</mat-label>
+                    <input matInput formControlName="fourthCtrl" required placeholder="Entre le Numero du Cameramen choisie" name="id_cameramen" [(ngModel)]="aniv.id_cameramen">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="fiveFormGroup">
+            <form [formGroup]="fiveFormGroup">
+                <ng-template matStepLabel>Tarte</ng-template>
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+                <mat-form-field appearance="fill" class="robein">
+                    <mat-label>Tarte</mat-label>
+                    <input matInput formControlName="fifthCtrl" required placeholder="Entre le Numero du Tarte choisie" name="id_tartes" [(ngModel)]="aniv.id_tartes">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="sixFormGroup">
+            <form [formGroup]="sixFormGroup">
+                <ng-template matStepLabel>Lebsa</ng-template>
+
+
+                <div class="rob">
+                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+                </div>
+
+                <mat-form-field appearance="fill" class="robein">
+                    <mat-label>Lebsa</mat-label>
+
+                    <input matInput formControlName="sixthCtrl" placeholder="Entre le Numero du Robe choisie" required name="id_lebsa" [(ngModel)]="aniv.id_lebsa">
+                </mat-form-field>
+
+                <div>
+                    <button mat-button matStepperNext (click)="insertanniv()" type="submit">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p>Valider votre Réservation.</p>
+            <div>
+                <button mat-button mat-raised-button class="btn btn-primary" type="submit" (click)="resan()">Valider</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+    <a href="/">
+        <button class="btn btn-danger btn float-right">Cancel</button>
+    </a>
+</div>

@@ -1,0 +1,37 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+}
+
+.mat-form-field {
+    margin-top: 16px;
+}
+
+.image2,
+.image1 {
+    width: 20%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+.image2 {
+    margin-left: 318px;
+}
+
+.image1 {
+    margin-left: 158px;
+}
+
+.robein {
+    margin-left: 490px;
+    width: 260px;
+}
+
+button {
+    margin-left: 1350px;
+}
+
+.row {
+    font-family: serif;
+}

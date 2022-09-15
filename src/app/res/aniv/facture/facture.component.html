@@ -1,0 +1,128 @@
+<app-navbar></app-navbar>
+
+
+<div class="card" id="content" #content>
+    <div class="card-body">
+        <div class="container mb-5 mt-3">
+            <div class="row d-flex align-items-baseline">
+                <div class="col-xl-9">
+                    <p style="color: #7e8d9f;font-size: 20px;" *ngFor="let res of reservations">Invoice >> <strong>ID: #{{res.id}}</strong></p>
+                </div>
+                <div class="col-xl-3 float-end">
+                    <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark" (click)="makePDF()"><i class="fas fa-print text-primary"></i> Download</a>
+                </div>
+                <hr>
+            </div>
+
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <img src="..\..\..\assets\images\Hafalat.png" alt="Hafalat" width="50" height="50">
+                        <p class="pt-0" style="font-family: serif; font-size: 20px;">Haffalate.com</p>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xl-8">
+                        <ul class="list-unstyled" *ngFor="let ct of clients">
+                            <li class="text-muted">To: <br><span style="color:#5d9fc5 ;">{{ct.Nom}} {{ct.Prenom}}</span></li>
+
+                            <li class="text-muted"><i class="fas fa-phone"></i>&nbsp;{{ct.Telephone}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4">
+                        <p class="text-muted">Invoice</p>
+                        <ul class="list-unstyled">
+                            <li class="text-muted" *ngFor="let res of reservations"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span class="fw-bold">ID:</span>#{{res.id}}</li>
+                            <li class="text-muted" id="date"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span class="fw-bold">Creation Date: </span>{{myDate | date: 'shortDate' }}</li>
+                            <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold"> Unpaid</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <h1><b>Anniversaire :</b></h1>
+                <div class="row my-2 mx-1 justify-content-center">
+                    <table class="table table-striped table-borderless">
+                        <thead style="background-color:#84B0CA ;" class="text-white">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Orchestre ID</th>
+                                <th scope="col">Traiteure ID</th>
+                                <th scope="col">Salle ID</th>
+                                <th scope="col">Cameramen ID</th>
+                                <th scope="col">Tarte ID</th>
+                                <th scope="col">Robe ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let an of anivs">
+                                <th scope="row">{{an.id}}</th>
+                                <td>{{an.id_orchestre}}</td>
+                                <td>{{an.id_traiteure}}</td>
+                                <td>{{an.id_salle}}</td>
+                                <td>{{an.id_cameramen}}</td>
+                                <td>{{an.id_tartes}}</td>
+                                <td>{{an.id_lebsa}}</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <h1><b>Reservation :</b></h1>
+                <div class="row my-2 mx-1 justify-content-center">
+                    <table class="table table-striped table-borderless">
+                        <thead style="background-color:#84B0CA ;" class="text-white">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Client ID</th>
+                                <th scope="col">Package ID</th>
+                                <th scope="col">Fete Type ID</th>
+                                <th scope="col">Anniversaire ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let res of reservations">
+                                <th scope="row">{{res.id}}</th>
+                                <td>{{res.id_client}}</td>
+                                <td>{{res.id_package}}</td>
+                                <td>{{res.id_fetetype}}</td>
+                                <td>{{res.id_res_fete}}</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8">
+                        <h3><b *ngFor="let p of packs">Package :&nbsp;{{p.name_of_package}}</b></h3>
+                        <p class="ms-3" id="22">Votre rendez-vous sera pour le jour {{myDate.getDate()+7}} du mois {{myDate.getMonth()+1}} </p>
+
+                    </div>
+                    <div class="col-xl-3">
+                        <ul class="list-unstyled">
+                            <li class="text-muted ms-3"><span class="text-black me-4"></span><br></li>
+                            <li class="text-muted ms-3 mt-2"><span class="text-black me-4"></span><br></li>
+                        </ul>
+                        <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span style="font-size: 25px; color :red" *ngFor="let p of packs"><b>{{p.prix}} Dh</b></span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xl-10">
+                        <p>Thank you for your purchase</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const d = Date.getDate();
+    text = d.setDate(date.getDate() + 7);
+    document.getElementById("22").innerHTML = text;
+</script>

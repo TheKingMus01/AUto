@@ -1,0 +1,45 @@
+<app-sidebar>
+    <div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#
+                            <th>
+                                <th scope="col">photo
+                                    <th>
+                                        <th scope="col">Price
+                                            <th>
+                                                <th scope="col">
+                                                    <a href='admin/orchestre/add'>
+                                                        <button mat-mini-fab color="accent" aria-label="Add" class="btn btn-success btn-sm btn-block">
+                                    <mat-icon>plus_one</mat-icon>
+                                  </button>
+                                                    </a>
+                                                </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let or of orchestres">
+                        <td scope="row">{{or.id}}
+                            <td>
+                                <td>{{or.photo}}
+                                    <td>
+                                        <td>{{or.Price}}
+                                            <td>
+                                                <td>
+                                                    <button mat-mini-fab color="primary" aria-label="delete icon" class="btn btn-danger btn" id="deletee" (click)="deleteOrchestreData(or.id)">
+                                        <mat-icon>delete</mat-icon>
+                                      </button>
+                                                    <a href="admin/orchestre/{{or.id}}"> <button mat-mini-fab color="primary" aria-label="Edite" class="btn btn-warning btn mx-1">
+                                          <mat-icon>menu</mat-icon>
+                                        </button></a>
+
+                                                </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</app-sidebar>

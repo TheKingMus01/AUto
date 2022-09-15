@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar class="navbar">
+            <a class="navbar-brand" href="admin"><img src="..\..\..\assets\images\Hafalat.png" alt="Hafalat" width="30" height="30"> HAFALAT.COM </a>
+        </mat-toolbar>
+        <mat-nav-list>
+            <a mat-list-item href="admin/clients">Client</a>
+            <a mat-list-item href="admin">Reservation</a>
+            <a mat-list-item href="admin/orchestres">Orchestre</a>
+            <a mat-list-item href="admin/packages">Package</a>
+            <a mat-list-item href="admin/fetetypes">Fetetype</a>
+            <a mat-list-item href="admin/mariages">Mariage</a>
+            <a mat-list-item href="admin/anivs">Anniversaire</a>
+            <a mat-list-item href="admin/naiss">Fete de naissance</a>
+            <a mat-list-item href="admin/funers">Funeraire</a>
+            <a mat-list-item href="admin/cameramens">Cameramen</a>
+            <a mat-list-item href="admin/hotels">Hotel</a>
+            <a mat-list-item href="admin/lebsas">Lebsa</a>
+            <a mat-list-item href="admin/zianas">Ziana</a>
+            <a mat-list-item href="admin/voitures">Voiture</a>
+            <a mat-list-item href="admin/traiteurs">Traiteur</a>
+            <a mat-list-item href="admin/tarts">Tarte</a>
+            <a mat-list-item href="admin/salles">Salle</a>
+            <a mat-list-item href="admin/diner">Diner</a>
+            <a mat-list-item><span (click)="logout()">LOGOUT</span></a>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+            <span>Administration</span>
+        </mat-toolbar>
+        <!-- Add Content Here -->
+        <ng-content></ng-content>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,15 @@
+<app-sidebar>
+    <div>
+        <div class="container">
+            <form (ngSubmit)="insertPackageData()">
+                <div class="form-group">
+                    <label for="Nom">name of package</label>
+                    <input type="text" class="form-control" name="name_of_package" aria-describedby="name_of_packageHelp" placeholder="Enter name_of_package" [(ngModel)]="package.name_of_package">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button></form>
+            <a href="admin/packages">
+                <button class="btn btn-danger btn float-right">Back</button>
+            </a>
+        </div>
+    </div>
+</app-sidebar>

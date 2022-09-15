@@ -1,0 +1,60 @@
+<div>
+    <app-navbar></app-navbar>
+
+
+
+
+
+
+    <div class="card">
+        <mat-vertical-stepper [linear]="isLinear">
+            <form>
+                <mat-step [stepControl]="Nom">
+                    <form [formGroup]="Nom">
+                        <ng-template matStepLabel>Fill out your Last Name</ng-template>
+                        <mat-form-field>
+                            <input matInput name="Nom" placeholder="votre Nom" formControlName="firstCtrl" required [(ngModel)]="client.Nom">
+                        </mat-form-field>
+                        <div>
+                            <button mat-button mat-raised-button color="primary" matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="Prenom">
+                    <form [formGroup]="Prenom">
+                        <ng-template matStepLabel>Fill out your First name</ng-template>
+                        <mat-form-field>
+                            <input matInput name="Prenom" placeholder="votre Prenom" formControlName="secondCtrl" required [(ngModel)]="client.Prenom">
+                        </mat-form-field>
+                        <div>
+                            <button mat-button mat-raised-button color="primary" matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="Telephone">
+                    <form [formGroup]="Telephone">
+                        <ng-template matStepLabel>Fill out your Phone Number</ng-template>
+                        <mat-form-field>
+                            <input matInput name="Telephone" placeholder="Numero Telephone" formControlName="thirdCtrl" required [(ngModel)]="client.Telephone">
+                        </mat-form-field>
+                        <div>
+                            <button mat-button mat-raised-button color="primary" matStepperPrevious>Back</button>
+                            <button mat-button mat-raised-button color="primary" matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel icon>Done</ng-template>
+                    faites votre réservation maintenant
+                    <div>
+                        <button mat-button mat-raised-button class="btn btn-primary" type="submit" (click)="insertClientData()">Réservation</button>
+                    </div>
+                </mat-step>
+            </form>
+        </mat-vertical-stepper>
+        <a href="/">
+            <button class="btn btn-danger btn float-right">Back</button>
+        </a>
+    </div>
+
+</div>

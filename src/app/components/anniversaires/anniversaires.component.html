@@ -1,0 +1,48 @@
+<app-sidebar>
+    <div>
+        <div class="container">
+            <div class="row my-2 mx-1 justify-content-center">
+                <table class="table table-striped table-borderless">
+                    <thead style="background-color:#84B0CA ;" class="text-white">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Orchestre ID</th>
+                            <th scope="col">Traiteure ID</th>
+                            <th scope="col">Salle ID</th>
+                            <th scope="col">Cameramen ID</th>
+                            <th scope="col">Tarte ID</th>
+                            <th scope="col">Robe ID</th>
+                            <th scope="col">
+                                <a href='admin/aniv/add'>
+                                    <button mat-mini-fab color="accent" aria-label="Add" class="btn btn-success btn-sm btn-block">
+                  <mat-icon>plus_one</mat-icon>
+                </button>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let an of anivs">
+                            <th scope="row">{{an.id}}</th>
+                            <td>{{an.id_orchestre}}</td>
+                            <td>{{an.id_traiteure}}</td>
+                            <td>{{an.id_salle}}</td>
+                            <td>{{an.id_cameramen}}</td>
+                            <td>{{an.id_tartes}}</td>
+                            <td>{{an.id_lebsa}}</td>
+                            <td><button mat-mini-fab color="primary" aria-label="delete icon" class="btn btn-danger btn" id="deletee" (click)="deleteAnnivData(an.id)">
+                              <mat-icon>delete</mat-icon>
+                            </button>
+                                <a href="admin/aniv/{{an.id}}"> <button mat-mini-fab color="primary" aria-label="Edite" class="btn btn-warning btn mx-1">
+                              <mat-icon>menu</mat-icon>
+                            </button></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</app-sidebar>

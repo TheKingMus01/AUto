@@ -1,0 +1,46 @@
+<app-sidebar>
+    <div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#
+                            <th>
+                                <th scope="col">Name of package
+                                    <th>Prix
+                                        <th>
+
+                                            <th scope="col">
+                                                <a href='admin/package/add'>
+                                                    <button mat-mini-fab color="accent" aria-label="Add" class="btn btn-success btn-sm btn-block">
+                                  <mat-icon>plus_one</mat-icon>
+                                </button>
+                                                </a>
+                                            </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of packages">
+                        <td scope="row">{{p.id}}
+                            <td>
+                                <td>{{p.name_of_package}}
+                                    <td>{{p.prix}}
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <button mat-mini-fab color="primary" aria-label="delete icon" class="btn btn-danger btn" id="deletee" (click)="deletePackageData(p.id)">
+                                        <mat-icon>delete</mat-icon>
+                                      </button>
+                                            <a href="admin/package/{{p.id}}"> <button mat-mini-fab color="primary" aria-label="Edite" class="btn btn-warning btn mx-1">
+                                        <mat-icon>menu</mat-icon>
+                                      </button></a>
+                                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</app-sidebar>

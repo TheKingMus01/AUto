@@ -1,0 +1,45 @@
+<div *ngIf="token != null">
+    <app-sidebar>
+        <div>
+            <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#
+                                <th>
+                                    <th scope="col">id_client
+                                        <th>
+                                            <th scope="col">id_package
+                                                <th>
+                                                    <th scope="col">id_fetetype
+                                                        <th>
+                                                            <th scope="col">id_res_fete
+                                                                <th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let res of reservations">
+                            <td scope="row">{{res.id}}
+                                <td>
+                                    <td>{{res.id_client}}
+                                        <td>
+                                            <td>{{res.id_package}}
+                                                <td>
+                                                    <td>{{res.id_fetetype}}
+                                                        <td>
+                                                            <td>{{res.id_res_fete}}
+                                                                <td>
+                                                                    <td><button mat-mini-fab color="primary" aria-label="delete icon" class="btn btn-danger btn" id="deletee" (click)="deleteReservationData(res.id)">
+                                                    <mat-icon>delete</mat-icon>
+                                                  </button>
+                                                                        <a href="admin/Reservation/{{res.id}}"> <button mat-mini-fab color="primary" aria-label="Edite" class="btn btn-warning btn mx-1">
+                                                    <mat-icon>menu</mat-icon>
+                                                  </button></a>
+                                                                    </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </app-sidebar>
+</div>

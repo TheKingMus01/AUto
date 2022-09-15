@@ -1,0 +1,32 @@
+<app-sidebar>
+    <div>
+        <div class="container">
+            <div class="contrainer">
+                <header>
+                    <h3 class="bg-dark text-white p-4 text-center"> Ajouter un orchestre </h3>
+                </header>
+                <form (ngSubmit)="Submit()" [formGroup]="form">
+                    <div class="input-group mb-3">
+                        <label for="photo">Select Orchestre</label>
+
+                        <input type="file" name="photo" formControlerName="photo" id="photo" class="form-control" [ngModelOptions]="{standalone: true}" (change)="uploadPhoto($event)" [(ngModel)]="orchestre.photo">
+
+                        <div *ngIf="submitted && f.photo.errors" class="invalid-feedback">
+                            <div *ngIf="f.photo.errors.required"> photo is required</div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="Price">Price</label>
+                        <input type="text" formControlerName="Price" name="Price" [ngModelOptions]="{standalone: true}" id="Price" class="form-control" [(ngModel)]="orchestre.Price">
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-dark btn-sm mt-4">submit</button>
+
+
+                </form>
+                <a href='admin/orchestres'>
+                    <button class="btn btn-danger btn float-right">Back</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</app-sidebar>

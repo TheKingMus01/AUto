@@ -1,0 +1,107 @@
+<div style="border: 10px solid #a97c50">
+    <app-navbar></app-navbar>
+
+    <app-slider></app-slider>
+    <hr>
+    <app-galery></app-galery>
+    <hr>
+    <app-title></app-title>
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="card-deck" #choix>
+        <div class="card">
+            <div class="all2" onclick="flip()" (click)="cardClicked()" [@cardFlip]="data.state">
+                <div class="face front">
+                    <img class="card-img-top" src="../../../assets/main/Anniversaire.jpeg" alt="Card image cap" id="anivimage">
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">Anniversaire</h5>
+                        <p class="card-text">Aujourd'hui vous avez la possibilité de réserver votre anniversaire avec le pack de votre choix.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Réserver maintenant</small>
+                    </div>
+                </div>
+                <div class="face back">
+                    <a href="/aniv/reserve"><button class="btn btn-primary"> Réserver maintenant </button></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card">
+            <div class="all2" onclick="flip()" (click)="cardClicked1()" [@cardFlip]="data1.state">
+                <div class="face front">
+                    <img class="card-img-top" src="../../../assets/main/nes.jpg" alt="Card image cap" id="anivimage">
+                    <div class="card-body">
+                        <h5 class="card-title">Nouvelle Naissance</h5>
+                        <p class="card-text">Préparer la fête d'arrivée du nouveau bébé à la maison avec nos pack de votre choix. <br>.
+                        </p>
+                    </div>
+
+
+                    <div class="card-footer">
+                        <small class="text-muted">Réserver maintenant</small>
+                    </div>
+                </div>
+                <div class="face back">
+                    <a href="/Naissance/reserve"><button class="btn btn-primary"> Réserver maintenant </button></a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="all2" onclick="flip()" (click)="cardClicked2()" [@cardFlip]="data2.state">
+                <div class="face front">
+                    <img class="card-img-top" src="../../../assets/main/Mariage1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Marriage</h5>
+                        <p class="card-text">Organiser une fête de mariage marocaine a l'aide de notre packs . Entre traiteur, neggafa, tenues, orchestre, salle de fêtes ...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Réserver maintenant</small>
+                    </div>
+                </div>
+                <div class="face back">
+                    <a href="/Mariage/reserve"><button class="btn btn-primary"> Réserver maintenant </button></a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="../../../assets/main/Funeraille.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Funeraille</h5>
+                <p class="card-text">Organiser les funérailles de manière professionnelle et organisée grâce à nos packs.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Réserver maintenant</small>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function flip() {
+            $('.card').toggleClass('flipped');
+        }
+    </script>
+
+
+
+
+    <app-propos></app-propos>
+    <app-footer></app-footer>
+</div>

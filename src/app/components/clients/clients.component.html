@@ -1,0 +1,47 @@
+<app-sidebar>
+    <div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#
+                            <th>
+                                <th scope="col">Nom
+                                    <th>
+                                        <th scope="col">Prenom
+                                            <th>
+                                                <th scope="col">Telephone
+                                                    <th>
+                                                        <th scope="col">
+                                                            <a href='admin/client/add'>
+                                                                <button mat-mini-fab color="accent" aria-label="Add" class="btn btn-success btn-sm btn-block">
+                                                <mat-icon>plus_one</mat-icon>
+                                              </button>
+                                                            </a>
+                                                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let clt of clients">
+                        <td scope="row">{{clt.id}}
+                            <td>
+                                <td>{{clt.Nom}}
+                                    <td>
+                                        <td>{{clt.Prenom}}
+                                            <td>
+                                                <td>{{clt.Telephone}}
+                                                    <td>
+                                                        <td><button mat-mini-fab color="primary" aria-label="delete icon" class="btn btn-danger btn" id="deletee" (click)="deleteClientData(clt.id)">
+                                            <mat-icon>delete</mat-icon>
+                                          </button>
+                                                            <a href="admin/client/{{clt.id}}"> <button mat-mini-fab color="primary" aria-label="Edite" class="btn btn-warning btn mx-1">
+                                            <mat-icon>menu</mat-icon>
+                                          </button></a>
+                                                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</app-sidebar>

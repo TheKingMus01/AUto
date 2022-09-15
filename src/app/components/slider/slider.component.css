@@ -1,0 +1,20 @@
+.carousel-inner {
+    position: relative;
+    height: 600px;
+    width: auto;
+    padding: 5px;
+}
+
+#slide {
+    width: auto;
+    height: 600px;
+}
+
+.carousel-inner .border_box {
+    position: absolute;
+    border: 3px solid #fff;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 10px;
+}
