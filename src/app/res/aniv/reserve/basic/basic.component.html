@@ -4,32 +4,29 @@
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Orchestre</ng-template>
-                <div class="rob">
-                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg" alt="Card image cap">
-                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/22.jpg" alt="Card image cap">
-                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/33.jpg" alt="Card image cap">
-                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/44.jpg" alt="Card image cap">
-                </div>
-                <mat-form-field appearance="fill" class="robein">
-                    <mat-label>Orchestre</mat-label>
-                    <input matInput formControlName="firstCtrl" required placeholder="Entre le Numero du Orchestre choisie" name="id_orchestre" [(ngModel)]="aniv.id_orchestre">
-                </mat-form-field>
+                    <button mat-button matStepperNext><input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"  class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg" alt="Card image cap">
+                    <input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"   class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/22.jpg" alt="Card image cap"><br>
+                    <input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"   class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/33.jpg" alt="Card image cap">
+                    <input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"   class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/44.jpg" alt="Card image cap">
+                    </button>
                 <div>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-button matStepperNext class="next">Next</button>
                 </div>
             </form>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup" label="Traiteure">
             <form [formGroup]="secondFormGroup">
-                <div name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure">
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg" value="2.JPG" alt="Card image cap">
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg" value="2.JPG" alt="Card image cap">
-                </div>
+                
+
+                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure" class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure"  class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure" class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure" class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+               
+                    
                 <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-button matStepperPrevious class="backk">Back</button>
+                    <button mat-button matStepperNext class="next">Next</button>
                 </div>
             </form>
         </mat-step>
@@ -45,7 +42,7 @@
                     <input matInput formControlName="thirdCtrl" required placeholder="Entre le Numero du Salle choisie" name="id_salle" [(ngModel)]="aniv.id_salle">
                 </mat-form-field>
                 <div>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-button matStepperNext class="next">Next</button>
                 </div>
             </form>
         </mat-step>
@@ -62,7 +59,7 @@
                     <input matInput formControlName="fourthCtrl" required placeholder="Entre le Numero du Cameramen choisie" name="id_cameramen" [(ngModel)]="aniv.id_cameramen">
                 </mat-form-field>
                 <div>
-                    <button mat-button matStepperNext>Next</button>
+                    <button mat-button matStepperNext class="next">Next</button>
                 </div>
             </form>
         </mat-step>
@@ -101,7 +98,7 @@
                 </mat-form-field>
 
                 <div>
-                    <button mat-button matStepperNext (click)="insertanniv()" type="submit">Next</button>
+                    <button mat-button matStepperNext (click)="insertanniv()" type="submit" class="next">Next</button>
                 </div>
             </form>
         </mat-step>
@@ -109,11 +106,11 @@
             <ng-template matStepLabel>Done</ng-template>
             <p>Valider votre Réservation.</p>
             <div>
-                <button mat-button mat-raised-button class="btn btn-primary" type="submit" (click)="resan()">Valider</button>
+                <button mat-button mat-raised-button class="btn btn-primary" id="valider" type="submit" (click)="resan()">Valider</button>
             </div>
         </mat-step>
     </mat-stepper>
     <a href="/">
-        <button class="btn btn-danger btn float-right">Cancel</button>
+        <button class="btn btn-danger btn float-right" id="cancel">Cancel</button>
     </a>
 </div>
