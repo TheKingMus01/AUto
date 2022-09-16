@@ -19,8 +19,8 @@
 
 
     <div class="card-deck" #choix>
-        <div class="card">
-            <div class="all2" onclick="flip()" (click)="cardClicked()" [@cardFlip]="data.state">
+        <div class="card" id="o11">
+            <div class="all2" onclick="flip()" (click)="cardClicked()" [@cardFlip]="data.state" >
                 <div class="face front">
                     <img class="card-img-top" src="../../../assets/main/Anniversaire.jpeg" alt="Card image cap" id="anivimage">
 
@@ -40,7 +40,7 @@
 
 
         </div>
-        <div class="card">
+        <div class="card" id="o12">
             <div class="all2" onclick="flip()" (click)="cardClicked1()" [@cardFlip]="data1.state">
                 <div class="face front">
                     <img class="card-img-top" src="../../../assets/main/nes.jpg" alt="Card image cap" id="anivimage">

@@ -48,7 +48,13 @@ submitte=false;
   ngOnInit(): void {
    // this.LoginForm();
    this.LoginForm();
-   this.token=localStorage.getItem('token');
+   this.checktock();
+  }
+  checktock(){
+    this.token=localStorage.getItem('token');
+    if (this.token=! null){
+      this.router.navigate(['/admin']);
+    }
   }
   get f(){
 
