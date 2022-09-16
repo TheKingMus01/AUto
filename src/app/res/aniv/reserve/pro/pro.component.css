@@ -5,8 +5,16 @@
 .mat-form-field {
     margin-top: 16px;
 }
+img{
+    width: 15%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px;
+    border-radius: 8px;
 
-.image2,
+
+}
+/* .image2,
 .image1 {
     width: 20%;
     background-color: white;
@@ -21,17 +29,18 @@
 
 .image1 {
     margin-left: 158px;
-}
+} */
 
 .robein {
     margin-left: 490px;
     width: 260px;
 }
 
-button {
+.backk,.next,#valider,#cancel {
     margin-left: 1350px;
 }
 
 .row {
     font-family: serif;
 }
+

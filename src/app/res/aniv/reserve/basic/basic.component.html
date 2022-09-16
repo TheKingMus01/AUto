@@ -4,11 +4,30 @@
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Orchestre</ng-template>
-                    <button mat-button matStepperNext><input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"  class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg" alt="Card image cap">
+
+              
+                        <h2 class="sample-step-title">Choose your business Orchestre</h2>
+                        <div class="card-wrapper">
+                            <igx-card *ngFor="let card of cards1" (click)="selectCard0(card)"
+                                [ngClass]="{'selected-card': selectedCard === card}" >
+              
+                                <igx-card-media>
+                                    <igx-badge *ngIf="selectedCard === card" value="Your current choice"></igx-badge>
+                                    <img src="{{card.img}}" alt="">
+                                    <!-- <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg" alt="Card image cap">
+                                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/22.jpg" alt="Card image cap">
+                                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/33.jpg" alt="Card image cap">
+                                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/44.jpg" alt="Card image cap">                                
+                                 --></igx-card-media>
+              
+                                
+                                </igx-card>
+                    </div>
+                    <!-- <button mat-button matStepperNext><input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"  class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg" alt="Card image cap">
                     <input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"   class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/22.jpg" alt="Card image cap"><br>
                     <input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"   class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/33.jpg" alt="Card image cap">
                     <input type="image" formControlName="firstCtrl" name="id_orchestre" [(ngModel)]="aniv.id_orchestre"   class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/44.jpg" alt="Card image cap">
-                    </button>
+                    </button> -->
                 <div>
                     <button mat-button matStepperNext class="next">Next</button>
                 </div>
@@ -17,12 +36,24 @@
         <mat-step [stepControl]="secondFormGroup" label="Traiteure">
             <form [formGroup]="secondFormGroup">
                 
+                <h2 class="sample-step-title">Choose your Traiteure</h2>
+                        <div class="card-wrapper">
+                            <igx-card *ngFor="let card of cards2" (click)="selectCard1(card)"
+                                [ngClass]="{'selected-card': selectedCard1 === card}" >
+              
+                                <igx-badge *ngIf="selectedCard1 === card" value="Your current choice"></igx-badge>
+                                <igx-card-media>
+                                    <img src="{{card.img}}" alt="">
 
-                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure" class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg" value="1.JPG" alt="Card image cap">
-                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure"  class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg" value="2.JPG" alt="Card image cap">
-                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure" class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg" value="1.JPG" alt="Card image cap">
-                <input type="image" name="id_traiteure" formControlName="secondCtrl" [(ngModel)]="aniv.id_traiteure" class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg" value="2.JPG" alt="Card image cap">
-               
+                                    <!-- <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg" value="2.JPG" alt="Card image cap">  -->
+                                </igx-card-media>
+              
+                                
+                                </igx-card>
+                    </div>
                     
                 <div>
                     <button mat-button matStepperPrevious class="backk">Back</button>
@@ -33,73 +64,121 @@
         <mat-step [stepControl]="thirdFormGroup">
             <form [formGroup]="thirdFormGroup">
                 <ng-template matStepLabel>Salle</ng-template>
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/11.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/22.jpg" value="2.JPG" alt="Card image cap">
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/33.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/44.jpg" value="2.JPG" alt="Card image cap">
-                <mat-form-field appearance="fill" class="robein">
-                    <mat-label>Salle</mat-label>
-                    <input matInput formControlName="thirdCtrl" required placeholder="Entre le Numero du Salle choisie" name="id_salle" [(ngModel)]="aniv.id_salle">
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperNext class="next">Next</button>
-                </div>
+                <h2 class="sample-step-title">Choose your Salle</h2>
+                <div class="card-wrapper">
+                    <igx-card *ngFor="let card of cards3" (click)="selectCard2(card)"
+                        [ngClass]="{'selected-card': selectedCard2 === card}" >
+      
+                        <igx-badge *ngIf="selectedCard2 === card" value="Your current choice"></igx-badge>
+                        <igx-card-media>
+                            <img src="{{card.img}}" alt="">
+
+                            <!-- <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                            <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+                         -->
+                        </igx-card-media>
+      
+                        
+                        </igx-card>
+            </div>
+        <div>
+            <button mat-button matStepperNext class="next">Next</button>
+            <button mat-button matStepperPrevious class="backk">Back</button>
+
+        </div>
             </form>
         </mat-step>
         <mat-step [stepControl]="fourthFormGroup">
             <form [formGroup]="fourthFormGroup">
                 <ng-template matStepLabel>Cameramen</ng-template>
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/11.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/22.jpg" value="2.JPG" alt="Card image cap">
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/33.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/44.jpg" value="2.JPG" alt="Card image cap">
 
-                <mat-form-field appearance="fill" class="robein">
-                    <mat-label>Cameramen</mat-label>
-                    <input matInput formControlName="fourthCtrl" required placeholder="Entre le Numero du Cameramen choisie" name="id_cameramen" [(ngModel)]="aniv.id_cameramen">
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperNext class="next">Next</button>
-                </div>
+                <h2 class="sample-step-title">Choose your CameraMan</h2>
+                <div class="card-wrapper">
+                    <igx-card *ngFor="let card of cards4" (click)="selectCard3(card)"
+                        [ngClass]="{'selected-card': selectedCard3 === card}" >
+      
+                        <igx-badge *ngIf="selectedCard3 === card" value="Your current choice"></igx-badge>
+                        <igx-card-media>
+                            <img src="{{card.img}}" alt="">
+
+                            <!-- <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                            <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+              -->
+                        </igx-card-media>
+      
+                        
+                        </igx-card>
+            </div>
+        <div>
+            <button mat-button matStepperNext class="next">Next</button>
+            <button mat-button matStepperPrevious class="backk">Back</button>
+
+        </div>
             </form>
         </mat-step>
         <mat-step [stepControl]="fiveFormGroup">
             <form [formGroup]="fiveFormGroup">
                 <ng-template matStepLabel>Tarte</ng-template>
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/11.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/22.jpg" value="2.JPG" alt="Card image cap">
-                <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/33.jpg" value="1.JPG" alt="Card image cap">
-                <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/44.jpg" value="2.JPG" alt="Card image cap">
-                <mat-form-field appearance="fill" class="robein">
-                    <mat-label>Tarte</mat-label>
-                    <input matInput formControlName="fifthCtrl" required placeholder="Entre le Numero du Tarte choisie" name="id_tartes" [(ngModel)]="aniv.id_tartes">
-                </mat-form-field>
-                <div>
-                    <button mat-button matStepperNext>Next</button>
-                </div>
+
+                <h2 class="sample-step-title">Choose your Tarte</h2>
+                <div class="card-wrapper">
+                    <igx-card *ngFor="let card of cards5" (click)="selectCard4(card)"
+                        [ngClass]="{'selected-card': selectedCard4 === card}" >
+      
+                        <igx-badge *ngIf="selectedCard4 === card" value="Your current choice"></igx-badge>
+                        <igx-card-media>
+                            <img src="{{card.img}}" alt="">
+
+                            <!-- <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                            <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/44.jpg" value="2.JPG" alt="Card image cap">
+                                 -->
+                        </igx-card-media>
+      
+                        
+                        </igx-card>
+            </div>
+        <div>
+            <button mat-button matStepperNext class="next">Next</button>
+            <button mat-button matStepperPrevious class="backk">Back</button>
+
+        </div>
             </form>
         </mat-step>
         <mat-step [stepControl]="sixFormGroup">
             <form [formGroup]="sixFormGroup">
-                <ng-template matStepLabel>Lebsa</ng-template>
+                <ng-template matStepLabel>Robe</ng-template>
 
+                <h2 class="sample-step-title">Choose your Robe</h2>
+                <div class="card-wrapper">
+                    <igx-card *ngFor="let card of cards6" (click)="selectCard5(card)"
+                        [ngClass]="{'selected-card': selectedCard5 === card}" >
+      
+                        <igx-badge *ngIf="selectedCard5 === card" value="Your current choice" ></igx-badge>
+                        <igx-card-media>
+                            <img src="{{card.img}}" alt="" >
 
-                <div class="rob">
-                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/11.jpg" value="1.JPG" alt="Card image cap">
-                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/22.jpg" value="2.JPG" alt="Card image cap">
-                    <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/33.jpg" value="1.JPG" alt="Card image cap">
-                    <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/44.jpg" value="2.JPG" alt="Card image cap">
-                </div>
+                            <!-- <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/11.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/22.jpg" value="2.JPG" alt="Card image cap">
+                            <img class="image1" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/33.jpg" value="1.JPG" alt="Card image cap">
+                            <img class="image2" src="../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/44.jpg" value="2.JPG" alt="Card image cap">        
+                        -->
+                        </igx-card-media>
+      
+                        
+                        </igx-card>
+            </div>
+        <div>
+            <button mat-button matStepperNext (click)="insertanniv()" type="submit" class="next">Finish</button>
+            <button mat-button matStepperPrevious class="backk">Back</button>
 
-                <mat-form-field appearance="fill" class="robein">
-                    <mat-label>Lebsa</mat-label>
+        </div>
 
-                    <input matInput formControlName="sixthCtrl" placeholder="Entre le Numero du Robe choisie" required name="id_lebsa" [(ngModel)]="aniv.id_lebsa">
-                </mat-form-field>
-
-                <div>
-                    <button mat-button matStepperNext (click)="insertanniv()" type="submit" class="next">Next</button>
-                </div>
             </form>
         </mat-step>
         <mat-step>
@@ -111,6 +190,6 @@
         </mat-step>
     </mat-stepper>
     <a href="/">
-        <button class="btn btn-danger btn float-right" id="cancel">Cancel</button>
+        <button class="btn btn-danger btn float-right" type="submit" (click)="revoke()" id="cancel">Cancel</button>
     </a>
 </div>

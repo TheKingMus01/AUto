@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {RouterModule, Routes } from '@angular/router';
-import { HttpClientModule} from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,19 +28,18 @@ import { ReservationsComponent } from './components/reservations/reservations.co
 import { AccuielComponent } from './components/public/accuiel/accuiel.component';
 import { AddclientComponent } from './components/clients/addclient/addclient.component';
 import { EditclientComponent } from './components/clients/editclient/editclient.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddorchestreComponent } from './components/orchestres/addorchestre/addorchestre.component';
 import { EditorchestreComponent } from './components/orchestres/editorchestre/editorchestre.component';
 import { SidenavComponent } from './components/navbar/sidenav/sidenav.component';
 import { EditreservationComponent } from './components/reservations/editreservation/editreservation.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SidenavModule} from 'angular-ng-sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavModule } from 'angular-ng-sidenav';
 
-
-
-import {MaterialExampleModule} from '../material.module';
-import {MatNativeDateModule} from '@angular/material/core';
+//I keep the new line
+import { MaterialExampleModule } from '../material.module';
+import { MatNativeDateModule } from '@angular/material/core';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -61,18 +60,19 @@ import { TitleComponent } from './components/title/title.component';
 import { NavbarComponent } from './components/navbar copy/navbar.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AnivComponent } from './res/aniv/aniv.component';
-import {  HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReserveComponent } from './res/aniv/reserve/reserve.component';
 import { BasicComponent } from './res/aniv/reserve/basic/basic.component';
 import { ProComponent } from './res/aniv/reserve/pro/pro.component';
 import { FactureComponent } from './res/aniv/facture/facture.component';
-import {jsPDF} from  "jspdf";
+import { jsPDF } from "jspdf";
 import { AProposComponent } from './info/apropos/apropos.component';
 import { ProposComponent } from './propos/propos.component';
 import { RegComponent } from './login/reg/reg.component';
 import { TraiteurComponent } from './login/traiteur/traiteur.component';
+import { IgxBadgeModule, IgxButtonModule, IgxCardModule, IgxCheckboxModule, IgxIconModule, IgxInputGroupModule, IgxMaskModule, IgxRadioModule, IgxSelectModule, IgxStepperModule } from 'igniteui-angular';
 
 const appRoutes: Routes = [];
 
@@ -131,25 +131,36 @@ const appRoutes: Routes = [];
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-   RouterModule.forRoot(appRoutes),
-   FormsModule,
-   MaterialExampleModule,
-   MatNativeDateModule,
-   MatSidenavModule,
-   BrowserAnimationsModule,
-   SidenavModule,
-   LayoutModule,
-   MatToolbarModule,
-   MatButtonModule,
-   MatIconModule,
-   MatListModule,
-   ReactiveFormsModule,
-   ToastrModule.forRoot(),
-   MDBBootstrapModule.forRoot(),
-   ReactiveFormsModule, MatStepperModule, MatInputModule, MatButtonModule,BrowserAnimationsModule
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    MaterialExampleModule,
+    MatNativeDateModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    SidenavModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
+    ReactiveFormsModule, MatStepperModule, MatInputModule, MatButtonModule, BrowserAnimationsModule,
+    IgxStepperModule,
+	  IgxMaskModule,
+	  IgxInputGroupModule,
+	  IgxButtonModule,
+	  IgxRadioModule,
+	  IgxCardModule,
+	  IgxCheckboxModule,
+	  IgxSelectModule,
+	  IgxIconModule,
+	  IgxBadgeModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
