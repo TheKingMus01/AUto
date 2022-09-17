@@ -44,6 +44,7 @@ import { ProComponent } from './res/aniv/reserve/pro/pro.component';
 import { FactureComponent } from './res/aniv/facture/facture.component';
 import { AProposComponent } from './info/apropos/apropos.component';
 import { AuthGuard } from './services/auth.guard';
+import { ClientGuard } from './services/client.guard';
 
 const routes: Routes = [
 { path: 'admin',canActivate:[AuthGuard], component:ReservationsComponent},
@@ -63,10 +64,10 @@ const routes: Routes = [
 { path: 'admin/fetetype/add',canActivate:[AuthGuard], component:AddfetetypeComponent},
 { path: 'admin/fetetype/:id',canActivate:[AuthGuard], component:EditfetetypeComponent},
 { path: 'aniv/reserve', component: AnivComponent},
-{ path: 'aniv/reserve/a', component: ReserveComponent},
-{ path: 'aniv/reserve/a/basic', component: BasicComponent},
-{ path: 'aniv/reserve/a/prum', component: ProComponent},
-{ path: 'aniv/reserve/facture', component: FactureComponent},
+{ path: 'aniv/reserve/a',canActivate:[ClientGuard], component: ReserveComponent},
+{ path: 'aniv/reserve/a/basic',canActivate:[ClientGuard], component: BasicComponent},
+{ path: 'aniv/reserve/a/prum',canActivate:[ClientGuard], component: ProComponent},
+{ path: 'aniv/reserve/facture',canActivate:[ClientGuard], component: FactureComponent},
 { path: 'info', component: AProposComponent},
 { path: 'admin/anivs',canActivate:[AuthGuard], component: AnniversairesComponent},
 { path: 'admin/aniv/add',canActivate:[AuthGuard], component:AddpackageComponent},

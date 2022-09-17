@@ -35,6 +35,7 @@ export class AnivComponent implements OnInit {
   insertClientData(){
   this.dataService.inserClientsData(this.client).subscribe(res=>{
       console.log(res);
+      localStorage.setItem('client', "true");
     this.router.navigate(['/aniv/reserve/a']);
     })
   }

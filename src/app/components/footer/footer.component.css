@@ -1,5 +1,13 @@
-.se {
-    margin-left: auto;
-    margin-right: 100px;
-    width: 60%;
+.bg-image {
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    padding: auto;
+    width: 90px;
+    
 }
+@media only screen and (max-width: 758px) {
+    .bg-image{
+        width: 40px;
+        padding: auto;
+        
+    }}

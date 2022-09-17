@@ -16,9 +16,15 @@
 
 
 
+    <!-- <div class="slide"  content="width=device-width, initial-scale=1.0">
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
 
     <div class="card-deck" #choix>
+    <div class="d-flex justify-content-center">
+        <div class="carousel-inner ">
+            <div class="carousel-item active">
         <div class="card" id="o11">
             <div class="all2" onclick="flip()" (click)="cardClicked()" [@cardFlip]="data.state" >
                 <div class="face front">
@@ -34,12 +40,14 @@
                     </div>
                 </div>
                 <div class="face back">
-                    <a href="/aniv/reserve"><button class="btn btn-primary"> Réserver maintenant </button></a>
+                    <a href="/aniv/reserve" class="bacl"><button class="btn btn-primary" id="bacl"> Réserver maintenant </button></a>
                 </div>
-            </div>
+            
 
 
         </div>
+            </div></div>
+                <div class="carousel-item ">
         <div class="card" id="o12">
             <div class="all2" onclick="flip()" (click)="cardClicked1()" [@cardFlip]="data1.state">
                 <div class="face front">
@@ -59,8 +67,9 @@
                     <a href="/Naissance/reserve"><button class="btn btn-primary"> Réserver maintenant </button></a>
                 </div>
             </div>
-        </div>
-        <div class="card">
+                </div></div>
+                    <div class="carousel-item ">
+        <div class="card" id="#o13">
             <div class="all2" onclick="flip()" (click)="cardClicked2()" [@cardFlip]="data2.state">
                 <div class="face front">
                     <img class="card-img-top" src="../../../assets/main/Mariage1.jpg" alt="Card image cap">
@@ -76,8 +85,9 @@
                     <a href="/Mariage/reserve"><button class="btn btn-primary"> Réserver maintenant </button></a>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </div></div>
+            <div class="carousel-item ">
+        <div class="card" id="#o14">
             <img class="card-img-top" src="../../../assets/main/Funeraille.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Funeraille</h5>
@@ -88,10 +98,19 @@
             </div>
         </div>
     </div>
+</div>
+<a class="carousel-control-prev" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true" onclick="plusDivs(-1)"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true" onclick="plusDivs(1)"></span>
+    <span class="sr-only">Next</span>
+</a>
+</div></div>
 
 
-
-
+    </div> -->
 
     <script>
         function flip() {
@@ -99,7 +118,181 @@
         }
     </script>
 
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-6 text-right">
+                <a class="btne mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btne  mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <!-- <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div> -->
+                                        <div class="all2" onclick="flip()" (click)="cardClicked()" [@cardFlip]="data.state" >
+                                            <a href="/aniv/reserve" ><div class="face_front">
+                                                <img class="card-img-top" src="../../../assets/main/Anniversaire.jpeg" alt="Card image cap" id="anivimage">
+                            
+                            
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Anniversaire</h5>
+                                                    <p class="card-text">Aujourd'hui vous avez la possibilité de réserver votre anniversaire avec le pack de votre choix.</p>
+                                                </div>
+                                                <div class="card-footer">
+                                                     <small class="text-muted">Réserver maintenant</small>
+                                                </div>
+                                            </div></a>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <!-- <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div> -->
+                                        <div class="all2" onclick="flip()" (click)="cardClicked1()" [@cardFlip]="data1.state">
+                                            <a href="/Naissance/reserve">
+                                            <div class="face_front">
+                                                <img class="card-img-top" src="../../../assets/main/nes.jpg" alt="Card image cap" id="anivimage">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Nouvelle Naissance</h5>
+                                                    <p class="card-text">Préparer la fête d'arrivée du nouveau bébé à la maison avec nos pack de votre choix. <br>.
+                                                    </p>
+                                                </div>
+                            
+                            
+                                                <div class="card-footer">
+                                                     <small class="text-muted">Réserver maintenant</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <!-- <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div> -->
+                                    
+                                        <div class="all2" onclick="flip()" (click)="cardClicked2()" [@cardFlip]="data2.state">
+                                            <a href="/Mariage/reserve">
+                                            <div class="face_front">
+                                                <img class="card-img-top" src="../../../assets/main/Mariage1.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Marriage</h5>
+                                                    <p class="card-text">Organiser une fête de mariage marocaine a l'aide de notre packs . Entre traiteur, neggafa, tenues, orchestre, salle de fêtes</p>
+                                                </div>
+                                                <div class="card-footer">
+                                                   <small class="text-muted">Réserver maintenant</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="all2" onclick="flip()" (click)="cardClicked2()" [@cardFlip]="data2.state">
+                                            <a href="/Funeraille/reserve">
+                                            <div class="face_front">
+                                                <img class="card-img-top" src="../../../assets/main/Funeraille.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Funeraille</h5>
+                                                    <p class="card-text">Organiser les funérailles de manière professionnelle et organisée grâce à nos packs ...</p>
+                                                </div>
+                                                <div class="card-footer">
+                                                      <small class="text-muted">Réserver maintenant</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        
+                                        <div class="all2" onclick="flip()" (click)="cardClicked()" [@cardFlip]="data.state" >
+                                            <a href="/aniv/reserve" >
+                                        <div class="face_front">
+                                            <img class="card-img-top" src="../../../assets/main/Anniversaire.jpeg" alt="Card image cap" id="anivimage">
+                        
+                        
+                                            <div class="card-body">
+                                                <h5 class="card-title">Anniversaire</h5>
+                                                <p class="card-text">Aujourd'hui vous avez la possibilité de réserver votre anniversaire avec le pack de votre choix.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <small class="text-muted">Réserver maintenant</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="all2" onclick="flip()" (click)="cardClicked1()" [@cardFlip]="data1.state">
+                                            <a href="/Naissance/reserve">
+                                            <div class="face_front">
+                                                <img class="card-img-top" src="../../../assets/main/nes.jpg" alt="Card image cap" id="anivimage">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Nouvelle Naissance</h5>
+                                                    <p class="card-text">Préparer la fête d'arrivée du nouveau bébé à la maison avec nos pack de votre choix. <br>.
+                                                    </p>
+                                                </div>
+                            
+                            
+                                                <div class="card-footer">
+                                                    <small class="text-muted">Réserver maintenant</small>
+                                                </div>
+                                            </div></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <app-propos></app-propos>

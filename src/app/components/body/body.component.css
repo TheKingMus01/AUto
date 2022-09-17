@@ -1,14 +1,16 @@
-.btn {
+ .btn {
     width: 90%;
     text-align: center;
-    
+    background-color: #a97c50;
     margin-bottom: -400px;
 }
 
 .one {
     padding-left: 50px;
 }
-
+.btne{
+    color:#a97c50 ;
+}
 .card-block {
     border: thick double bisque;
     text-align: center;
@@ -17,13 +19,23 @@
 
 .card-deck {
     padding: 20px;
-}
+} 
 @media only screen and (max-width: 758px) {
-    #o11 , #o12{
-        width: 50%;
-        margin: 50px 0px;
-       position:static;
-    }}
+    #o11 , #o12 ,#o13,#o14{
+       
+    }body, .card-text{
+        font-size: 10px;
+    }
+    
+    .card-deck {
+        margin: 50px;
+        position:flex;
+
+    }.card {
+        width: 10%;
+        
+    }
+}
 .card {
     -webkit-perspective: 800px;
     perspective: 800px;
@@ -38,7 +50,7 @@
 }
 
 .card {
-    width: 200px;
+    width: 100%;
     position: relative;
     border: 1px solid #ccc;
     -webkit-perspective: 800px;
@@ -61,26 +73,16 @@
     -webkit-transform-origin: 50% 50%;
 }
 
-.face {
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: rgb(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-}
 
-.all2 .back {
+
+.all2 ,.face_back {
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
-    position: absolute;
+    
 }
-
+ 
 .all2.flipped {
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
@@ -88,17 +90,12 @@
     transform: rotateY( 180deg);
 }
 
-a {
+a,a:hover, a:focus{
     display: block;
+    color: inherit;
+    text-decoration: inherit;
 }
-
-button {
-    margin-bottom: 50px;
-    background-color: #a97c50;
-    border-radius: 40px;
-}
-
 .card-deck {
     font-family: serif;
     font-size: 17px;
-}
+}  

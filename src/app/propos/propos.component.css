@@ -28,13 +28,33 @@
     width: 15%;
 }
 
-.tab-content {
+#pills-home {
     margin-left: 100px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 30px; */
 }
 
 .nav-link {
     color: #a97c50;
+}
+@media only screen and (max-width: 758px) {
+    .tab {
+        font-size: 18px;
+
+       
+    }#pills-home {
+        width: 100%;
+        margin-left: 5px;
+
+    }
+    .bg-image{
+  width: 44%;
+    }
+    .se{
+        display:table-cell;
+        padding-left: 110px;
+    }
+    
+
 }

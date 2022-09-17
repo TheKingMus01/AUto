@@ -1,6 +1,5 @@
 import { Component, OnInit , ChangeDetectionStrategy } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import  {TokensService} from '../../services/tokens.service';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -24,7 +23,7 @@ import  {TokensService} from '../../services/tokens.service';
 })
 export class BodyComponent implements OnInit {
 
-  constructor(private token :TokensService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
