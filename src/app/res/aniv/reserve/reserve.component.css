@@ -38,3 +38,13 @@
     justify-content: center;
     margin-left: 100px;
 }
+@media only screen and (max-width: 758px) {
+   img {
+      width: 30%; 
+      display: flex;
+ }
+ #row1,#row2{
+    padding: 5px;
+    margin: 5px;
+ }
+}

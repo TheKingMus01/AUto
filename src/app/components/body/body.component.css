@@ -21,9 +21,7 @@
     padding: 20px;
 } 
 @media only screen and (max-width: 758px) {
-    #o11 , #o12 ,#o13,#o14{
-       
-    }body, .card-text{
+       body, .card-text{
         font-size: 10px;
     }
     
@@ -33,7 +31,8 @@
 
     }.card {
         width: 10%;
-        
+        width: 50px;
+        position:flex;
     }
 }
 .card {

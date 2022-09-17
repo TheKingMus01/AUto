@@ -43,4 +43,23 @@ img{
 .row {
     font-family: serif;
 }
+@media only screen and (max-width: 758px) {
+    img {
+        width: 50%; 
+    }
+  .stepper{
+    width: 95%; 
+
+  }
+  h2{
+    font-size: 12px;
+
+  }
+  .backk,.next,#valider,#cancel {
+    margin-left: 0px;
+}
+button{
+    margin: 10px;
+}
+ }
 

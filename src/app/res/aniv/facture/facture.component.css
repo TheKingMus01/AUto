@@ -1,0 +1,18 @@
+@media only screen and (max-width: 758px) {
+   
+  table{
+    width: 50%; 
+
+  }
+  #tabb{
+    
+  }
+  h1,h3{
+    font-size: 15px;
+
+  }
+ 
+button{
+    margin: 10px;
+}
+ }
