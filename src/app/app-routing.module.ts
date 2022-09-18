@@ -43,38 +43,39 @@ import { BasicComponent } from './res/aniv/reserve/basic/basic.component';
 import { ProComponent } from './res/aniv/reserve/pro/pro.component';
 import { FactureComponent } from './res/aniv/facture/facture.component';
 import { AProposComponent } from './info/apropos/apropos.component';
-import { AuthGuard } from './services/auth.guard';
+import { AuthoGuard } from './services/autho.guard';
 import { ClientGuard } from './services/client.guard';
+import { LogGuard } from './services/log.guard';
 
 const routes: Routes = [
-{ path: 'admin',canActivate:[AuthGuard], component:ReservationsComponent},
-{ path: 'admin/Reservation/:id',canActivate:[AuthGuard], component:EditreservationComponent},
+{ path: 'admin',canActivate:[AuthoGuard], component:ReservationsComponent},
+{ path: 'admin/Reservation/:id',canActivate:[AuthoGuard], component:EditreservationComponent},
 { path: '', component:BodyComponent},
-{ path: 'login', component:FormComponent},
-{ path: 'admin/clients',canActivate:[AuthGuard], component:ClientsComponent},
-{ path: 'admin/client/add',canActivate:[AuthGuard], component:AddclientComponent},
-{ path: 'admin/client/:id',canActivate:[AuthGuard], component:EditclientComponent},
-{ path: 'admin/orchestres',canActivate:[AuthGuard], component: OrchestresComponent},
-{ path: 'admin/orchestre/add',canActivate:[AuthGuard], component:AddorchestreComponent},
-{ path: 'admin/orchestre/:id',canActivate:[AuthGuard], component:EditorchestreComponent},
-{ path: 'admin/packages',canActivate:[AuthGuard], component: PackagesComponent},
-{ path: 'admin/package/add',canActivate:[AuthGuard], component:AddpackageComponent},
-{ path: 'admin/package/:id',canActivate:[AuthGuard], component:EditpackageComponent},
-{ path: 'admin/fetetypes',canActivate:[AuthGuard], component: FetetypesComponent},
-{ path: 'admin/fetetype/add',canActivate:[AuthGuard], component:AddfetetypeComponent},
-{ path: 'admin/fetetype/:id',canActivate:[AuthGuard], component:EditfetetypeComponent},
+{ path: 'cnx',canActivate:[LogGuard], component:FormComponent},
+{ path: 'admin/clients',canActivate:[AuthoGuard], component:ClientsComponent},
+{ path: 'admin/client/add',canActivate:[AuthoGuard], component:AddclientComponent},
+{ path: 'admin/client/:id',canActivate:[AuthoGuard], component:EditclientComponent},
+{ path: 'admin/orchestres',canActivate:[AuthoGuard], component: OrchestresComponent},
+{ path: 'admin/orchestre/add',canActivate:[AuthoGuard], component:AddorchestreComponent},
+{ path: 'admin/orchestre/:id',canActivate:[AuthoGuard], component:EditorchestreComponent},
+{ path: 'admin/packages',canActivate:[AuthoGuard], component: PackagesComponent},
+{ path: 'admin/package/add',canActivate:[AuthoGuard], component:AddpackageComponent},
+{ path: 'admin/package/:id',canActivate:[AuthoGuard], component:EditpackageComponent},
+{ path: 'admin/fetetypes',canActivate:[AuthoGuard], component: FetetypesComponent},
+{ path: 'admin/fetetype/add',canActivate:[AuthoGuard], component:AddfetetypeComponent},
+{ path: 'admin/fetetype/:id',canActivate:[AuthoGuard], component:EditfetetypeComponent},
 { path: 'aniv/reserve', component: AnivComponent},
 { path: 'aniv/reserve/a',canActivate:[ClientGuard], component: ReserveComponent},
 { path: 'aniv/reserve/a/basic',canActivate:[ClientGuard], component: BasicComponent},
 { path: 'aniv/reserve/a/prum',canActivate:[ClientGuard], component: ProComponent},
 { path: 'aniv/reserve/facture',canActivate:[ClientGuard], component: FactureComponent},
 { path: 'info', component: AProposComponent},
-{ path: 'admin/anivs',canActivate:[AuthGuard], component: AnniversairesComponent},
-{ path: 'admin/aniv/add',canActivate:[AuthGuard], component:AddpackageComponent},
-{ path: 'admin/aniv/:id',canActivate:[AuthGuard], component:EditpackageComponent},
-{ path: 'admin/mariages',canActivate:[AuthGuard], component: MariagesComponent},
-{ path: 'admin/mariage/add',canActivate:[AuthGuard], component:MariagesComponent},
-{ path: 'admin/mariage/:id',canActivate:[AuthGuard], component:MariagesComponent},
+{ path: 'admin/anivs',canActivate:[AuthoGuard], component: AnniversairesComponent},
+{ path: 'admin/aniv/add',canActivate:[AuthoGuard], component:AddpackageComponent},
+{ path: 'admin/aniv/:id',canActivate:[AuthoGuard], component:EditpackageComponent},
+{ path: 'admin/mariages',canActivate:[AuthoGuard], component: MariagesComponent},
+{ path: 'admin/mariage/add',canActivate:[AuthoGuard], component:MariagesComponent},
+{ path: 'admin/mariage/:id',canActivate:[AuthoGuard], component:MariagesComponent},
 
 ];
 
@@ -83,3 +84,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

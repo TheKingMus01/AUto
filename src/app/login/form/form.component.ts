@@ -48,14 +48,14 @@ submitte=false;
   ngOnInit(): void {
    // this.LoginForm();
    this.LoginForm();
-   this.checktock();
+  //  this.checktock();
   }
-  checktock(){
-    this.token=localStorage.getItem('token');
-    if (this.token=! null){
-      this.router.navigate(['/admin']);
-    }
-  }
+  // checktock(){
+  //   this.token=localStorage.getItem('token');
+  //   if (this.token=! null){
+  //     this.router.navigate(['/admin']);
+  //   }
+  // }
   get f(){
 
     return this.form.controls;}

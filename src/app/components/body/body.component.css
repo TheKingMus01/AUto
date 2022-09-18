@@ -72,7 +72,12 @@
     -webkit-transform-origin: 50% 50%;
 }
 
-
+.carousel-control-prev{
+color: rgba(0, 0, 0, 0.75);}
+.carousel-control-next{
+    /* right: 5px; */
+        /* position: relative; */
+}
 
 .all2 ,.face_back {
     -webkit-transform: rotateY( 180deg);

@@ -20,8 +20,15 @@
    
 }
 @media only screen and (max-width: 600px) {
-    .carousel-inner .border_box {
-        height: 4px;
-        width: 10px;
+    .carousel-inner {
+        height: 350px;
+        
+    }
+    #slide{
+        height: 350px;
+    }
+    .carousel-item{
+        width: 100%;
+
     }
   }
