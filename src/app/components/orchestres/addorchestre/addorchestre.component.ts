@@ -42,7 +42,7 @@ orchestre = new Orchestre();
     }
     Submit(){
     this.submitted = true;
-    this.orchestre.photo=this.photo;
+    this.orchestre.img=this.photo;
 
     }
 }

@@ -9,7 +9,7 @@
                     <div class="input-group mb-3">
                         <label for="photo">Select Orchestre</label>
 
-                        <input type="file" name="photo" formControlerName="photo" id="photo" class="form-control" [ngModelOptions]="{standalone: true}" (change)="uploadPhoto($event)" [(ngModel)]="orchestre.photo">
+                        <input type="file" name="photo" formControlerName="photo" id="photo" class="form-control" [ngModelOptions]="{standalone: true}" (change)="uploadPhoto($event)" [(ngModel)]="orchestre.img">
 
                         <div *ngIf="submitted && f.photo.errors" class="invalid-feedback">
                             <div *ngIf="f.photo.errors.required"> photo is required</div>

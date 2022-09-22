@@ -53,6 +53,9 @@ export class DataService {
   getDataOrchestre(){
     return this.httpClient.get('https://backendlarav.herokuapp.com/api/orchestres');
   }
+  get_basic_Orchestre(){
+    return this.httpClient.get('https://backendlarav.herokuapp.com/api/basic_orc');
+  }
 
   inserOrchestresData(data: any){
     return this.httpClient.post('https://backendlarav.herokuapp.com/api/addOrchestre',data)

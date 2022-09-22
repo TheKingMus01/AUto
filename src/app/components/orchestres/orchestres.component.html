@@ -24,10 +24,11 @@
                     <tr *ngFor="let or of orchestres">
                         <td scope="row">{{or.id}}
                             <td>
-                                <td>{{or.photo}}
+                                <td>{{or.img}}
                                     <td>
                                         <td>{{or.Price}}
-                                            <td>
+                                            <td><td>{{or.package}}
+                                                <td>
                                                 <td>
                                                     <button mat-mini-fab color="primary" aria-label="delete icon" class="btn btn-danger btn" id="deletee" (click)="deleteOrchestreData(or.id)">
                                         <mat-icon>delete</mat-icon>

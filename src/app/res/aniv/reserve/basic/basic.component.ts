@@ -31,6 +31,7 @@ export class BasicComponent implements OnInit {
   id4:any;
   id5:any;
   id6:any;
+  orchestres: any;
   constructor(private cdr: ChangeDetectorRef,private _formBuilder: FormBuilder, private route:ActivatedRoute,private dataService:DataService,private router: Router) { }
 
   ngOnInit(): void {
@@ -52,7 +53,7 @@ export class BasicComponent implements OnInit {
     this.sixFormGroup = this._formBuilder.group({
       sixthCtrl: ['', Validators.required],
     });
-
+    this.getOrchestrebasic();
   }
   insertanniv(){
 
@@ -83,94 +84,85 @@ export class BasicComponent implements OnInit {
 
         })
       }
-      public cards1: any[] = [
-        {id:1,
-          img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/11.jpg"
-        },
-        {
-          id:2,
-          img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/22.jpg"
-        },
-        {id:3,
-          img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/33.jpg"
-        },
-        {id:4,
-          img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Orchestre/Basic/44.jpg"
-        }
-    ];
+      getOrchestrebasic(){
+        this.dataService.get_basic_Orchestre().subscribe(res => {
+        this.orchestres = res;
+        });
+      }
+      
     public cards2: any[] = [
       {id:1,
-        img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/11.jpg"
+        img:"../../../../../assets/Hafalat/Hafalat/Reserver/Traiteur/Basic/11.jpg"
       },
       {
         id:2,
-        img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/22.jpg"
+        img:"../../../../../assets/Hafalat/Hafalat/Reserver/Traiteur/Basic/22.jpg"
       },
       {id:3,
-        img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/33.jpg"
+        img:"../../../../../assets/Hafalat/Hafalat/Reserver/Traiteur/Basic/33.jpg"
       },
       {id:4,
-        img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Traiteur/Basic/44.jpg"
+        img:"../../../../../assets/Hafalat/Hafalat/Reserver/Traiteur/Basic/44.jpg"
       }
   ];
   public cards3: any[] = [
     {id:1,
-      img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/11.jpg"
+      img:"../../../../../assets/Hafalat/Hafalat/Reserver/Salle/Basic/11.jpg"
     },
     {
       id:2,
-      img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/22.jpg"
+      img:"../../../../../assets/Hafalat/Hafalat/Reserver/Salle/Basic/22.jpg"
     },
     {id:3,
-      img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/33.jpg"
+      img:"../../../../../assets/Hafalat/Hafalat/Reserver/Salle/Basic/33.jpg"
     },
     {id:4,
-      img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Salle/Basic/44.jpg"
+      img:"../../../../../assets/Hafalat/Hafalat/Reserver/Salle/Basic/44.jpg"
     }
 ];
 public cards4: any[] = [
   {id:1,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/11.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/CameraMan/Basic/11.jpg"
   },
   {
     id:2,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/22.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/CameraMan/Basic/22.jpg"
   },
   {id:3,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/33.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/CameraMan/Basic/33.jpg"
   },
   {id:4,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/CameraMan/Basic/44.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/CameraMan/Basic/44.jpg"
   }
 ];
 public cards5: any[] = [
   {id:1,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/11.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Tarte/Basic/11.jpg"
   },
   {
     id:2,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/22.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Tarte/Basic/22.jpg"
   },
   {id:3,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/33.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Tarte/Basic/33.jpg"
   },
   {id:4,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Tarte/Basic/44.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Tarte/Basic/44.jpg"
   }
 ];
 public cards6: any[] = [
   {id:1,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/11.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Lebsa/Basic/11.jpg"
   },
   {
     id:2,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/22.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Lebsa/Basic/22.jpg"
   },
   {id:3,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/33.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Lebsa/Basic/33.jpg"
   },
   {id:4,
-    img:"../../../../../assets/Hafalat/Hafalat/RÉSERVER/Lebsa/Basic/44.jpg"
+    img:"../../../../../assets/Hafalat/Hafalat/Reserver/Lebsa/Basic/44.jpg"
   }
 ];
     public selectCard0(card: any): void {

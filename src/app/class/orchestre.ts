@@ -1,5 +1,5 @@
 export class Orchestre {
-  photo:any;
+  img:any;
 	Price:any;
-
+  package:any;
 }
