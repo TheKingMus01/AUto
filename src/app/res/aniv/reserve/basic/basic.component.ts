@@ -215,6 +215,7 @@ public selectCard5(card: any): void {
   console.log(this.selectedCard5.id);
 }
 public revoke(){
-  
+  localStorage.removeItem('client');
+  this.router.navigate(['/']);
 }
 }
